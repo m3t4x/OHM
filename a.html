@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="text-base">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Log in!    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="/assets/images/ohmenergie.png">
+                <link rel="stylesheet" href="/build/app.eb3a3abc.css">
+        <style>
+            input#recup_and_sign_step_elecContractStartDate, input#recup_and_sign_step_gasContractStartDate {
+                display: block;
+                width: auto;
+                height: calc(2.25rem + 2px);
+                padding: .375rem .75rem;
+                font-size: 1rem;
+                line-height: 1.5;
+                border: 0px solid #ffffff;
+                border-radius: 0px;
+                transition: none !important;
+                background: url(/assets/images/calendrier.png) !important;
+                background-size: 20px !important;
+                background-position-y: 10px !important;
+                padding-left: 30px !important;
+                background-repeat: no-repeat !important;
+            }
+        </style>
+        
+                        <script src="/assets/js/gtm_for_page_head.js"></script>
+        </head>
+<style>
+
+
+    [type="radio"]:checked + label div {
+        background-color: #30AD71;
+    }
+
+    [type="radio"]:checked + label span {
+        @apply font-bold;
+    }
+
+    [type="radio"]:checked + label div span{
+        color: #ffffff;
+    }
+
+    [type="radio"]:checked + #prTE {
+        border: none;
+    }
+
+
+    [type="radio"]:not(:checked) + label div {
+        background-color: #fff;
+    }
+
+    [type="radio"]:not(:checked) + label div span{
+        color: #000000;
+    }
+
+    .zoom-img-1 {
+        position: absolute;
+        left: 230px;
+        z-index: 99999;
+        top: 400px;
+    }
+
+        @keyframes saveBtn {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+</style>
+<body class="bg-white p-0 m-0 text-ohm-dark-blue">
+    <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6BR9TS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="header">
+    <header>
+
+
+    <div class="max-w-min max-h-min fixed top-10 right-0 z-10 p-4 top-6">
+                    <div class="bg-ohm-green rounded-full min-w-max px-3 py-1 text-center hidden md:flex justify-center align-middle cursor-pointer ">
+                <a href="tel:0970702125" class="no-underline text-white flex lg:text-lg justify-center align-middle items-center gap-2">
+                    <img class="w-5 h-5" src="/assets/images/tel.png"/>09 70 70 21 25
+                </a>
+            </div>
+        
+            </div>
+
+    </header>  
+</div>
+
+        
+
+<div class="relative w-full pb-2">
+    <div class="min-h-[420px] h-full my-8 container">
+        <div class="w-full flex flex-col md:flex-row gap-7">
+                        <div class="w-full">
+                    
+    <div class="flex items-center justify-center p-4 w-full h-full">
+        <div class="w-full md:w-2/3 lg:w-1/3 bg-ohm-bg rounded-lg shadow-lg p-5 space-y-4">
+            <div class="w-full flex items-center justify-center">
+                <img alt="logo_ohm" src="/assets/images/logo_ohm.png"/>
+            </div>
+
+                            <div class=" items-center justify-center bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative w-full" role="alert">
+                    <span class="block sm:inline">Le nom d&#039;utilisateur n&#039;a pas pu être trouvé.</span>
+                    <span class="absolute bottom-0 right-0 px-4 py-3">
+                        <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
+                    </span>
+                </div>
+            
+            <form id="login-form" action="/login" method="post" class="w-full flex flex-col gap-4 text-ohm-dark-blue">
+                <input type="hidden" name="_csrf_token" value="c9a7a44da4597a621fea4d1b.92aBV5YKHkbU0g6ezbat9wiAL_dQC4OZKTqsM1dhPRc.wi7Lbs5SdySAhkXGl-6VtlyyFqAER_uvfg2eUS8Wd0S2JbcO2HN8PI2FOg"/>
+
+                <div class="block space-y-2">
+                    <label class="font-bold">Login</label>
+                    <input value="azdadaz" type="text" class="w-full py-2 px-4 bg-white rounded-lg shadow-lg border-none focus:border-2 focus:border-ohm-green invalid:border-red-500" id="username" name="_username" required/>
+                </div>
+
+                <div class="block space-y-2">
+                    <label class="font-bold">Mot de passe</label>
+                    <input type="password" id="password" name="_password" class="w-full py-2 px-4 bg-white rounded-lg shadow-lg border-none focus:border-2 focus:ring-ohm-green focus:border-ohm-green invalid:border-red-500" required/>
+                </div>
+
+                <input type="hidden" placeholder="Source" class="form-control input-focus" name="source"
+                        id="source" value='phone'>
+
+                <div class="w-full flex items-center justify-center">
+                    <button id="_submit" name="_submit" class="action_phone_login rounded-lg shadow-lg bg-ohm-green text-white uppercase p-3">Se connecter</button>
+                </div>
+            </form>
+
+                    </div>
+    </div>
+
+
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+            localStorage.clear();
+            $('.action_phone_login').on('click', function (e) {
+                $('#loader').show();
+                $('#login-form').submit();
+            });
+        });
+
+    </script>
+                                                                                                                                            
+                
+            </div>
+            
+                    </div>
+
+
+                
+        <div class="mt-5">
+            <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white">
+                <h2 id="policyCollapse">
+                    <button type="button" class="flex items-center gap-4 w-full p-5 font-medium text-left text-gray-500" data-accordion-target="#policyBodyCollapse" aria-expanded="false" aria-controls="policyBodyCollapse">
+                        <b>Confidentialité et données personnelles</b>
+                        <svg data-accordion-icon="data-accordion-icon" class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                        </svg>
+                    </button>
+                </h2>
+                <div id="policyBodyCollapse" class="hidden text-gray-500 space-y-5 text-sm" aria-labelledby="policyCollapse">
+                    <p>En cliquant sur "Suivant", vous autorisez Ohm Énergie, responsable de traitement, à recueillir vos données à caractère personnel au moyen du présent formulaire de souscription pour nous permettre de traiter votre demande et vous proposer le contrat le plus adapté. Vos données personnelles seront conservées le temps nécessaire à la réalisation des opérations décrites.
+                        Ohm Energie transmettra à ses sous-traitants les données personnelles nécessaires à la réalisation des missions qui leur sont confiées dans le cadre de ces mêmes finalités.
+                    </p>
+
+                    <p>Ohm énergie et ses partenaires conservent vos coordonnées téléphoniques pour vous contacter sous 30 jours et permettre la finalisation de votre souscription.</p>
+
+                    <p>Vous disposez d'un droit d’opposition, d'accès, de rectification, de suppression, de limitation
+                        portant sur les données vous concernant ainsi qu’un droit à la portabilité de vos données. Vous
+                        pouvez exercer ces droits en vous adressant à : service_rgpd@ohm-energie.com
+                        Vous avez également le droit d’exercer un recours auprès de la Commission Nationale de
+                        l’Informatique et des Libertés (CNIL).
+                    </p>
+
+                    <p>Pour en savoir plus, consultez notre <a target="_blank"
+                                                               href="https://ohm-energie.com/mentions-legales#RGPDancre"
+                                                               class="underline">Politique de confidentialité</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div id="loader" class="inset-0 h-screen flex justify-center items-center fixed"
+             style="display: none; height:calc(100% - 60px);">
+            <img width="180px" height="180px" src="/assets/images/loader2.gif"/>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+            
+                <div class="relative w-full min-h-[358px] bg-ohm-dark-blue text-white px-3 py-10">
+        <div class="text-white text-md md:text-lg lg:text-2xl text-center">
+            Changer de fournisseur d’Énergie, c’est beaucoup plus simple que vous ne le pensez !
+        </div>
+        <div class="flex flex-wrap justify-center align-middle items-center text-center mt-5 gap-5">
+            <div class="block p-4 w-44 lg:w-64" style="margin-bottom:11px;">
+                                <div class="flex justify-center align-middle items-center">
+                    <img src="/assets/images/svg/pictoeclair.svg" />
+                </div>
+                <div class="block mt-5 text-center pb-1">
+                    <h3 class="font-extrabold uppercase">sans coupure d'énergie</h3>
+                    <span class="text-sm">Restez toujours branchés, sans pause ni coupure.</span>
+                </div>
+            </div>
+
+            <div class="block p-4 w-44 lg:w-64">
+                <div class="flex justify-center align-middle items-center">
+                    <img src="/assets/images/svg/pictoeuro.svg"/>
+                </div>
+                <div class="block mt-5 text-center">
+                    <h3 class="font-extrabold uppercase">sans frais de dossier</h3>
+                    <span class="text-sm">Raccordement gratuit</span>
+                </div>
+            </div>
+
+            <div class="block p-4 w-44 lg:w-64">
+                <div class="flex justify-center align-middle items-center">
+                    <img src="/assets/images/svg/pictocadenas.svg" />
+                </div>
+                <div class="block mt-5 text-center">
+                    <h3 class="font-extrabold uppercase">sans engagement</h3>
+                    <span class="text-sm">Résiliation à tout moment sans frais</span>
+                </div>
+            </div>
+
+            <div class="block p-4 w-44 lg:w-64">
+                <div class="flex justify-center align-middle items-center">
+                    <img src="/assets/images/svg/pictodossier.svg" />
+                </div>
+                <div class="block mt-5 text-center">
+                    <h3 class="font-extrabold uppercase">sans intervention</h3>
+                    <span class="text-sm">Aucun RDV, aucun changement de compteur</span>
+                </div>
+            </div>
+
+            <div class="block p-4 w-44 lg:w-64">
+                <div class="flex justify-center align-middle items-center">
+                    <img src="/assets/images/svg/pictodossier2.svg" />
+                </div>
+                <div class="block mt-5 text-center">
+                    <h3 class="font-extrabold uppercase">sans document</h3>
+                    <span class="text-sm">On s'occupe de toutes les démarches pour vous</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    
+            <style>
+        @keyframes zoomIn {
+        from {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        50% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes zoomOut {
+        from {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+</style>
+<!-- End model-->
+
+<div id="where_to_find_my_delivery_point_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="whereToFindMyDeliveryPointModal"  tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80 flex items-center justify-center">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex items-start justify-between p-4 rounded-t">
+                <h3 class="text-xl font-semibold text-ohm-dark-blue uppercase">
+
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="where_to_find_my_delivery_point_modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-6 space-x-6 flex flex-col md:flex-row justify-center items-center gap-4">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <span class="text-ohm-green text-sm lg:text-lg font-bold text-center">Je peux vous aider à trouver votre PDL</span>
+                    <img class="w-48 h-48" src="/assets/images/svg/ohmyPdl.svg" />
+                    <span class="text-ohm-dark-blue text-sm lg:text-md font-thin text-center">C’est le numéro à 14 chiffres se trouvant sur votre facture d`électricité</span>
+                </div>
+
+                <div class="relative">
+                    <img class="animate-[zoomIn_1s_ease-in] absolute left-0 bottom-1/3" src="/assets/images/zoom.png" />
+                    <img src="/assets/images/elec_paper.png" />
+                </div>
+            </div>
+            <div class="flex items-center justify-between p-6 space-x-2  rounded-b">
+                <button onclick="whereToFindMyDeliveryPointModal.hide()" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center">Compris !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="where_to_find_my_calculation_point_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="whereToFindMyCalculationPointModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex items-start justify-between p-4 rounded-t">
+                <h3 class="text-xl font-semibold text-ohm-dark-blue uppercase">
+
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="where_to_find_my_calculation_point_modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-6 space-x-6 flex flex-col md:flex-row justify-center items-center gap-4">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <span class="text-ohm-green text-sm lg:text-lg font-bold text-center">Je peux vous aider à trouver votre PCE</span>
+                    <img class="w-48 h-48" src="/assets/images/svg/ohmyPdl.svg" />
+                    <span class="text-ohm-dark-blue text-sm lg:text-md font-thin text-center">C’est le numéro à 14 chiffres se trouvant sur votre facture</span>
+                </div>
+
+                <div class="relative">
+                    <img class="animate-[zoomIn_1s_ease-in] absolute left-0 bottom-1/3" src="/assets/images/bulle_zoom_gaz.png" />
+                    <img src="/assets/images/facture_gaz.jpg" />
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-6 space-x-2  rounded-b">
+                <button onclick="whereToFindMyCalculationPointModal.hide()" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center">Compris !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="non_valid_pdl_pce_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="nonValidPdlPceModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex items-start justify-between p-4 rounded-t">
+                <h3 class="text-xl font-semibold text-ohm-dark-blue uppercase">
+
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="non_valid_pdl_pce_modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-6 space-x-6 flex flex-col md:flex-row justify-center items-center gap-4">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <span class="text-ohm-dark-blue text-sm lg:text-md font-thin text-center">
+                            Attention, nous avons détecté un problème concernant votre adresse ou votre PDL/PCE
+                            voulez-vous continuer pour évaluer votre mensualité ?
+                    </span>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-6 space-x-2  rounded-b">
+                <button onclick="submitPdlPceForm(true); nonValidPdlPceModal.hide()" data-modal-hide="non_valid_pdl_pce_modal" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center"> Continuer</button>
+
+                <button onclick="nonValidPdlPceModal.hide()" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center"> Modifier</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="error_city_code_between_energy_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="errorCityCodeBetweenEnergyModal" aria-modal="true" role="dialog" aria-labelledby="error_city_code_between_energy_modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex items-start justify-between p-4 rounded-t">
+                <h3 class="text-xl font-semibold text-ohm-dark-blue uppercase">
+
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="error_city_code_between_energy_modal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-6 space-x-6 flex flex-col md:flex-row justify-center items-center gap-4">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <span class="text-ohm-dark-blue text-sm lg:text-md font-thin text-center">
+                        Attention, la commune de votre Point de Comptage Gaz n’est pas la même que celle de votre
+                        Point De Livraison Électricité, merci de vérifier ou de souscrire l’électricité et le gaz
+                        séparément.
+                    </span>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-6 space-x-2  rounded-b">
+
+                <button onclick="errorCityCodeBetweenEnergyModal.hide()" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center"> Continuer</button>
+                <button id="js--modal_edit_pdl_pce" onclick="errorCityCodeBetweenEnergyModal.hide()" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center">  Modifier Mes données</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="save_subscription" data-modal-ohm-initialize="true" data-modal-ohm-function="saveSubscription" tabindex="-1" aria-modal="true" role="dialog" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80 mx-auto">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex items-start justify-between p-4 rounded-t">
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="save_subscription">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-6 space-y-6">
+                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-center">
+                <h3>
+                    Je sauvegarde l'avancement de mon contrat ?
+                </h3>
+                </p>
+            </div>
+            <div class="flex items-center justify-between p-6 space-x-2  rounded-b">
+                <button id="continue_subscription" onclick="saveSubscription.hide()" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none  rounded-full border border-gray-200 text-sm font-medium px-5 py-2.5">Je continue</button>
+                <button type="button" id="confirm_save_subscription" data-modal-hide="save_subscription" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center">Je confirme</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="error_research_point_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="errorResearchPointModal" tabindex="-1" aria-hidden="true"
+         class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+        <div class="relative w-full max-w-2xl max-h-full">
+            <div class="relative bg-white rounded-lg shadow">
+                <div class="flex items-start justify-between p-4 rounded-t">
+                    <button type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="error_research_point_modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                             viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <div class="p-6 space-y-6">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-center">
+                        êtes vous sûr(e) que le nom renseigné est correct ?
+                    </p>
+                </div>
+                <div class="flex items-center justify-between p-6 space-x-2  rounded-b">
+                    <button onclick="errorResearchPointModal.hide()" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none  rounded-full border border-gray-200 text-sm font-medium px-5 py-2.5">Valider</button>
+                    <button type="button" onclick="errorResearchPointModal.hide()" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="no_pdl_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="noPdlModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+        <div class="relative w-full max-w-2xl max-h-full">
+            <div class="relative bg-white rounded-lg shadow">
+                <div class="flex items-start justify-between p-4 rounded-t">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="no_pdl_modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <div class="p-6 space-y-6">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400 text-center">
+                        Désolé, nous n’avons pas pu trouver votre PDL. Vous pouvez nous
+                        appeler pour qu’un agent vous accompagne : <br>
+                        <a href="tel:09 70 70 21 25">
+                            09 70 70 21 25
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="indexElecModal" tabindex="-1" aria-hidden="true" data-modal-ohm-initialize="true"
+     class="fixed hidden top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+    <div class="relative w-full lg:w-2/3 max-w-4xl max-h-full">
+        <div class="relative bg-white rounded-xl shadow-lg">
+            <div class="flex items-start justify-between px-4 py-1 rounded-t">
+                <button type="button"
+                        class="text-ohm-green font-black bg-transparent border-2 border-ohm-green hover:border-ohm-dark-green hover:text-ohm-dark-green rounded-full text-sm w-6 h-6 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                        data-modal-hide="indexElecModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                         viewbox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+
+            <div class="w-full bg-ohm-green py-1">
+                <p class="text-white mx-auto text-center">Où trouver mon index (électricité) ?</p>
+            </div>
+
+            <div class="w-full pb-8 px-2 lg:px-16">
+
+                <div id="indexElecButtons" class="group mt-5 flex flex-wrap justify-center gap-4">
+                    <div>
+                        <input type="radio" id="indexLinkyButton" name="indexElecType" value="linky"
+                               class="hidden peer/indexLinky" checked/>
+                        <label for="indexLinkyButton"
+                               class="block text-xs p-2 w-32 text-center text-gray-900 border border-gray-900 hover:border-ohm-green peer-checked/indexLinky:border-ohm-green peer-checked/indexLinky:text-ohm-green rounded-full shadow-lg cursor-pointer">Linky</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="indexElectroButton" name="indexElecType" value="electro"
+                               class="hidden peer/indexElectro"/>
+                        <label for="indexElectroButton"
+                               class="block text-xs p-2 w-32 text-center text-gray-900 border border-gray-900 hover:border-ohm-green peer-checked/indexElectro:border-ohm-green peer-checked/indexElectro:text-ohm-green rounded-full shadow-lg cursor-pointer">Electronique</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="indexElectroMButton" name="indexElecType" value="electroM"
+                               class="hidden peer/indexElectroM"/>
+                        <label for="indexElectroMButton"
+                               class="block text-xs p-2 w-32 text-center text-gray-900 border border-gray-900 hover:border-ohm-green peer-checked/indexElectroM:border-ohm-green peer-checked/indexElectroM:text-ohm-green rounded-full shadow-lg cursor-pointer">Electromagnetique</label>
+                    </div>
+                </div>
+
+                <div class="w-full p-6 space-x-6 flex flex-col lg:flex-row justify-center gap-4">
+                    <div class="w-full lg:w-1/2 flex flex-col justify-between gap-12">
+                        <p id='indexLinkyhelpText'
+                           class="help-text-index-elec text-ohm-dark-blue text-base font-thin my-auto">
+                            Les index peuvent être trouvé directement sur votre compteur Linky.
+                            <br/>
+                            Pour cela, faites défiler les affichages du compteur (<span
+                                    class='text-ohm-dark-blue font-extrabold'>appui sur la touche +</span>) jusqu’à lire
+                            la valeur «
+                            <span class='text-ohm-dark-blue font-extrabold'>Heure pleine</span>
+                            » et
+                            <span class='text-ohm-dark-blue font-extrabold'>Heure creuse</span>
+                            »
+                        </p>
+                        <p id='indexElectroMhelpText'
+                           class="hidden help-text-index-elec text-ohm-dark-blue text-base font-thin my-auto">
+                            En
+                            <span class='text-ohm-dark-blue font-extrabold'>option “ base ”</span>
+                            , il vous suffit de regarder l’unique cadran sur le compteur.
+                            <br/>
+                            En
+                            <span class='text-ohm-dark-blue font-extrabold'>option “ heures pleines/heures creuses”</span>
+                            , le compteur est constitué de 2 cadrans distincts : un cadran HP (heures pleines), et un
+                            cadran HC (heures creuses.)
+                        </p>
+                        <p id='indexElectrohelpText'
+                           class="hidden help-text-index-elec text-ohm-dark-blue text-base font-thin my-auto">
+                            En
+                            <span class='text-ohm-dark-blue font-extrabold'>option “base”</span>, appuyer
+                            <span class='text-ohm-dark-blue font-extrabold'>une fois sur le bouton S</span>
+                            pour afficher votre consommation à l’écran.
+                            <br/>
+                            En
+                            <span class='text-ohm-dark-blue font-extrabold'>option “HP/HC”</span>, appuyer sur le
+                            <span class='text-ohm-dark-blue font-extrabold'>bouton S</span>
+                            pour avoir l’affichage de la consommation en HP. Et appuyez sur le
+                            <span class='text-ohm-dark-blue font-extrabold'>bouton D</span>
+                            pour voir s’afficher la consommation en HC.
+                        </p>
+                    </div>
+
+                    <div class="w-full lg:w-1/2">
+                        <img id='indexElecHelpImage' class='w-full object-contain'
+                             src="/assets/images/linky-index.png"/>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <button type="button"
+                            class="text-white text-sm bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full shadow-lg px-8 py-2.5 text-center uppercase"
+                            data-modal-hide="indexElecModal">
+                        Compris !
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="alert_no_pdl_souscription_modal" data-modal-ohm-initialize="true" data-modal-ohm-function="alert_no_pdl_souscription_modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[100%] max-h-full bg-gray-600 bg-opacity-80">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <div class="relative bg-white rounded-lg shadow">
+            <div class="flex items-start justify-between p-4 rounded-t">
+                <h3 class="text-xl font-semibold text-ohm-dark-blue uppercase">
+
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" onclick="alert_no_pdl_souscription_modal.hide()">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <div class="p-6 space-x-6 flex flex-col md:flex-row justify-center items-center gap-4">
+                <div class="text-center flex flex-col items-center justify-center gap-2">
+                    <span class="text-ohm-dark-blue text-sm lg:text-md font-thin text-center">Le Gestionnaire de Réseau de Distribution ne reconnait pas votre Point de Livraison</span>
+                </div>
+            </div>
+            <div class="flex items-center justify-center p-6 space-x-2  rounded-b">
+                <button onclick="alert_no_pdl_souscription_modal.hide()" type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center"> Annuler</button>
+
+                <button onclick="submitForm(); alert_no_pdl_souscription_modal.hide()"  type="button" class="text-white bg-ohm-green hover:bg-green-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center"> Continuer quand même !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+</body>
+
+    <script src="/build/runtime.9a71ee5d.js" defer></script><script src="/build/8.29f2648d.js" defer></script><script src="/build/app.5cf21b59.js" defer></script>
+        <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/jquery-migrate-3.0.0.min.js"></script>
+            <script src="/assets/js/main_ohm.js"></script>
+    <script src="/assets/js/jquery.validate.min.js"></script>
+    <script src="/assets/js/animation-ohmy-based-on-class.js"></script>
+
+        <script src="/assets/js/validator.min.js"></script>
+    <script src="/assets/datepicker/js/datepicker.min.js"></script>
+    <script src="/assets/datepicker/js/constants/datepicker.fr-FR.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+
+    <script>
+        var modals = document.querySelectorAll('[data-modal-ohm-initialize]');
+        modals.forEach(function (modal) {
+            if(modal.getAttribute('data-modal-ohm-initialize') == "true")
+            {
+                var input = document.createElement("input");
+                input.setAttribute("type", "hidden");
+                input.setAttribute("data-modal-target", modal.getAttribute('id'));
+                input.setAttribute("id", "modalTarget");
+                document.body.appendChild(input);
+
+                const modalFunction = modal.getAttribute('data-modal-ohm-function');
+                const options = {
+                    placement: 'center',
+                    backdrop: 'dynamic',
+                    backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40',
+                    closable: true,
+                };
+                
+                const modalInstance = new Modal(modal, options);
+                window[modalFunction] = {
+                    show: function () {
+                        modalInstance.show();
+                    },
+                    hide: function () {
+                        modalInstance.hide();
+                    }
+                };
+            }
+
+        });
+
+    </script>
+
+            <script type="text/javascript">
+            var userContact = {"contactFirstName":"","contactLastName":"","contactEmail":""};
+        </script>
+        <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+        <script src="/assets/js/SalesForceChat.js"></script>
+        <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+    <script>
+        // Hiding the loader on the first page load
+        (function () {
+            window.onpageshow = function (event) {
+                if (event.persisted) {
+                    window.location.reload();
+                }
+            };
+        })();
+    </script>
+
+    <script>
+        var ohmyError = document.getElementById('ohmyError');
+        var listError = document.getElementById('errorList');
+        var closeError = document.getElementById('closeError');
+        if (ohmyError) {
+            ohmyError.addEventListener('click', function () {
+                listError.classList.toggle('hidden');
+            });
+
+            closeError.addEventListener('click', function() {
+                listError.classList.toggle('hidden');
+            });
+        }
+    </script>
+    <script>
+        var saveBtn = document.getElementById('saveBtn');
+        var saveTxt = document.getElementById('saveTxt');
+
+        if (saveBtn && saveTxt) {
+            saveBtn.addEventListener('mouseenter', function() {
+                saveTxt.classList.toggle('hidden');
+            });
+
+            saveBtn.addEventListener('mouseleave', function() {
+                saveTxt.classList.toggle('hidden');
+            });
+        }
+        const toastSuccess = document.getElementById('toast-success');
+        const optionsToast = {
+            transition: 'transition-opacity',
+            duration: 5000,
+            timing: 'ease-out',
+        }
+        if (toastSuccess) {
+            const dismiss = new Dismiss(toastSuccess,'', optionsToast);
+            dismiss.hide();
+        }
+    </script>
+</html>

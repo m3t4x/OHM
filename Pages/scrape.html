@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Form</title>
+</head>
+<body>
+    <fieldset>
+            <legend>OHM-Energie Login</legend>
+            <label for="username">Username</label><br>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input id="checkLogin" type="submit" value="Check Login">
+    </fieldset>
+    <fieldset>
+            <legend>Check History</legend>
+            <input id="checkHistory" type="submit" value="Check History">
+
+    </fieldset>
+    <form action="/start" method="post">
+    <fieldset>
+            <legend>Filter</legend>
+            <br>
+            <label for="startDate">Select Start Date:</label>
+            <input type="date" id="startDate" name="startDate"><br><br>
+
+            <label for="endDate">Select End Date:</label>
+            <input type="date" id="endDate" name="endDate"><br><br>
+
+            <input type="checkbox" id="brouillon" name="status" value="Brouillon">
+            <label for="brouillon">Brouillon</label><br>
+
+            <input type="checkbox" id="creation" name="status" value="Création du l'ordre du payement">
+            <label for="creation">Création du l'ordre du payement</label><br>
+
+            <input type="checkbox" id="valide" name="status" value="Validé(Ni signé ni payé)">
+            <label for="valide">Validé(Ni signé ni payé)</label><br>
+
+            <input type="checkbox" id="confirmeAgent" name="status" value="Confirmé par l'agent">
+            <label for="confirmeAgent">Confirmé par l'agent</label><br>
+
+            <input type="checkbox" id="confirmeClient" name="status" value="Confirmé par le client">
+            <label for="confirmeClient">Confirmé par le client</label><br>
+
+            <input type="checkbox" id="abandonneClient" name="status" value="Abandonné par le client">
+            <label for="abandonneClient">Abandonné par le client</label><br>
+
+            <input type="checkbox" id="abandonneAgent" name="status" value="Abandonné par l'agent">
+            <label for="abandonneAgent">Abandonné par l'agent</label><br>
+
+            <input type="checkbox" id="signe" name="status" value="Signé">
+            <label for="signe">Signé</label><br>
+
+            <input type="checkbox" id="parcoursFinalise" name="status" value="Parcours finalisé">
+            <label for="parcoursFinalise">Parcours finalisé</label><br>
+
+            <input type="checkbox" id="echeancierCree" name="status" value="Échéancier crée">
+            <label for="echeancierCree">Échéancier crée</label><br>
+
+            <input type="checkbox" id="attentePrelevement" name="status" value="En attente de premier prélèvement">
+            <label for="attentePrelevement">En attente de premier prélèvement</label><br>
+
+            <input type="checkbox" id="ibanFrauduleux" name="status" value="Iban frauduleux">
+            <label for="ibanFrauduleux">Iban frauduleux</label><br>
+
+            <input type="checkbox" id="attentePDLValide" name="status" value="En attente du PDL valide">
+            <label for="attentePDLValide">En attente du PDL valide</label><br>
+
+            <input type="checkbox" id="attentePCEValide" name="status" value="En attente du PCE valide">
+            <label for="attentePCEValide">En attente du PCE valide</label><br>
+
+            <input type="checkbox" id="attentePCEMismatch" name="status" value="En attente du PCE valide suite à un mismatch">
+            <label for="attentePCEMismatch">En attente du PCE valide suite à un mismatch</label><br>
+
+            <input type="checkbox" id="attentePDLMismatch" name="status" value="En attente du PDL valide suite à un mismatch">
+            <label for="attentePDLMismatch">En attente du PDL valide suite à un mismatch</label><br>
+
+            <input type="checkbox" id="offreNonValide" name="status" value="Offre non valide à cette date(non plus commercialiser)">
+            <label for="offreNonValide">Offre non valide à cette date(non plus commercialiser)</label><br>
+
+            <input type="checkbox" id="problemeDetectionOffre" name="status" value="Problème de detection de l'offre choisis">
+            <label for="problemeDetectionOffre">Problème de detection de l'offre choisis</label><br>
+
+            <input type="checkbox" id="segmentInvalide" name="status" value="Segment invalide du point de livraison">
+            <label for="segmentInvalide">Segment invalide du point de livraison</label><br>
+
+            <input type="checkbox" id="estimationInvalide" name="status" value="Estimation invalide">
+            <label for="estimationInvalide">Estimation invalide</label><br>
+
+            <input type="checkbox" id="dateDepasse" name="status" value="Date de début du contrat dépasse la date de validité de l'offre">
+            <label for="dateDepasse">Date de début du contrat dépasse la date de validité de l'offre</label><br>
+
+            <input type="checkbox" id="attenteValidationVente" name="status" value="En attente de la validation de la vente">
+            <label for="attenteValidationVente">En attente de la validation de la vente</label><br>
+
+            <input type="checkbox" id="venteValideeControleur" name="status" value="Vente validée par le contrôleur">
+            <label for="venteValideeControleur">Vente validée par le contrôleur</label><br>
+
+            <input type="checkbox" id="venteNonValidee" name="status" value="Vente n'est pas validée par le contrôleur">
+            <label for="venteNonValidee">Vente n'est pas validée par le contrôleur</label><br>
+
+            <input type="checkbox" id="contratAttente" name="status" value="Contrat mis en attente">
+            <label for="contratAttente">Contrat mis en attente</label><br>
+
+            <input type="checkbox" id="contratAbandonDem" name="status" value="Contrat abandonner pour déménagement">
+            <label for="contratAbandonDem">Contrat abandonner pour déménagement</label><br>
+
+            <input type="checkbox" id="contratAttenteAbandon" name="status" value="Contrat en attente d'abandon du contrat remplacé">
+            <label for="contratAttenteAbandon">Contrat en attente d'abandon du contrat remplacé</label><br>
+
+            <input type="checkbox" id="attentePaiement" name="status" value="En attente de paiement">
+            <label for="attentePaiement">En attente de paiement</label><br>
+
+            <input type="checkbox" id="attentePaiementCTRGaz" name="status" value="En attente de paiement CTR GAZ">
+            <label for="attentePaiementCTRGaz">En attente de paiement CTR GAZ</label><br>
+
+            <input type="checkbox" id="attentePaiementVenteDomicile" name="status" value="En attente de paiement CTR GAZ, destiné pour les ventes à domicile">
+            <label for="attentePaiementVenteDomicile">En attente de paiement CTR GAZ, destiné pour les ventes à domicile</label><br>
+
+            <input type="checkbox" id="attenteIndexPrepaiement" name="status" value="En attente des index pour effectuer le pre-paiement">
+            <label for="attenteIndexPrepaiement">En attente des index pour effectuer le pre-paiement</label><br>
+
+            <input type="checkbox" id="attenteIndexDelaiLegal" name="status" value="En attente des index pour effectuer le pre-paiement, aussi attente de délais légal pour les vente à domicile">
+            <label for="attenteIndexDelaiLegal">En attente des index pour effectuer le pre-paiement, aussi attente de délais légal pour les vente à domicile</label><br>
+
+            <input type="checkbox" id="switchASAP" name="status" value="Switch ASAP">
+            <label for="switchASAP">Switch ASAP</label><br>
+
+            <input type="checkbox" id="attenteDelaiRetractation" name="status" value="Attente fin délai rétractation">
+            <label for="attenteDelaiRetractation">Attente fin délai rétractation</label><br>
+
+            <input type="checkbox" id="termineNextEarth" name="status" value="Terminé NextEarth">
+            <label for="termineNextEarth">Terminé NextEarth</label><br>
+
+            <input type="checkbox" id="demandeHorsHGZ" name="status" value="Demande hors HGZ">
+            <label for="demandeHorsHGZ">Demande hors HGZ</label><br>
+
+            <input type="checkbox" id="inactif_recuperation" name="status" value="inactif_recuperation">
+            <label for="inactif_recuperation">Inactif (récupération)</label><br>
+
+            <input type="checkbox" id="pp1_fait" name="status" value="PP1 fait (à transférer à Odoo)">
+            <label for="pp1_fait">PP1 fait (à transférer à Odoo)</label><br>
+
+            <input type="checkbox" id="abandonne" name="status" value="abandonne">
+            <label for="abandonne">Abandonné (à transférer à Odoo)</label><br>
+
+            <input type="checkbox" id="a_valider" name="status" value="a_valider">
+            <label for="a_valider">A valider</label><br>
+
+            <input type="checkbox" id="initialise" name="status" value="initialise">
+            <label for="initialise">Initialisé</label><br>
+
+            <input type="checkbox" id="en_attente_intervention" name="status" value="en_attente_intervention">
+            <label for="en_attente_intervention">En attente d'intervention (manuel)</label><br>
+
+            <input type="checkbox" id="inactif_annule_marche" name="status" value="inactif_annule_marche">
+            <label for="inactif_annule_marche">Inactif (annulé par le marché)</label><br>
+
+            <input type="checkbox" id="abandon_manuel" name="status" value="abandon_manuel">
+            <label for="abandon_manuel">Abandon manuel</label><br>
+
+            <input type="checkbox" id="abandon_contrats_doublons" name="status" value="abandon_contrats_doublons">
+            <label for="abandon_contrats_doublons">Abandon des contrats doublons</label><br>
+
+            <input type="checkbox" id="inactif_rejet_interne" name="status" value="inactif_rejet_interne">
+            <label for="inactif_rejet_interne">Inactif (rejet validation interne)</label><br>
+
+            <input type="checkbox" id="inactif_rejete_marche" name="status" value="inactif_rejete_marche">
+            <label for="inactif_rejete_marche">Inactif (rejeté par le marché)</label><br>
+
+            <input type="checkbox" id="pp1_rejete_banque" name="status" value="pp1_rejete_banque">
+            <label for="pp1_rejete_banque">PP1 rejeté par la banque</label><br>
+
+            <input type="checkbox" id="envoye_marche" name="status" value="envoye_marche">
+            <label for="envoye_marche">Envoyé au marché</label><br>
+
+            <input type="checkbox" id="accepte" name="status" value="accepte">
+            <label for="accepte">Accepté</label><br>
+
+            <input type="checkbox" id="effectif" name="status" value="Effectif">
+            <label for="effectif">Effectif</label><br>
+
+            <input type="checkbox" id="contrat_actif_sorti_perimetre" name="status" value="contrat_actif_sorti_perimetre">
+            <label for="contrat_actif_sorti_perimetre">Contrat qui a été actif, et qui est maintenant sorti du périmètre de livraison</label><br>
+
+            <input type="checkbox" id="inconnue" name="status" value="inconnue">
+            <label for="inconnue">Inconnue</label><br>
+
+            <input type="checkbox" id="en_attente_paiement" name="status" value="en_attente_paiement">
+            <label for="en_attente_paiement">En attente de paiement, destiné pour les ventes à domicile</label><br>
+
+            <input type="checkbox" id="en_attente_verification_chf_mes" name="status" value="en_attente_verification_chf_mes">
+            <label for="en_attente_verification_chf_mes">En attente de vérification - CHF/MES</label><br>
+
+            <input type="checkbox" id="en_attente_verification_erreur_pdl" name="status" value="en_attente_verification_erreur_pdl">
+            <label for="en_attente_verification_erreur_pdl">En attente de vérification - erreur PDL</label><br>
+
+            <input type="checkbox" id="en_attente_verification_nom_introuvable" name="status" value="en_attente_verification_nom_introuvable">
+            <label for="en_attente_verification_nom_introuvable">En attente de vérification - nom introuvable</label><br>
+
+
+        </fieldset>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkLoginButton = document.getElementById("checkLogin");
+            const checkHistory = document.getElementById("checkHistory");
+            checkHistory.addEventListener("click", function () {
+                window.location.href = "/history";
+            });
+            checkLoginButton.addEventListener("click", function () {
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+                fetch('http://127.0.0.1:5000/checkLogin', {
+                    method: 'POST',
+                    body: JSON.stringify({ username, password }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Add any necessary headers here
+                    },
+                })
+                .then(response => response.json())
+                .then(data => {
+                    checkLoginButton.style.backgroundColor = "green";
+                    checkLoginButton.style.color = "white";
+                    checkLoginButton.value = "Success !";
+                })
+                .catch(error => {
+                    console.error(error);
+                    checkLoginButton.style.backgroundColor = "red";
+                    checkLoginButton.style.color = "white";
+                    checkLoginButton.value = "Wrong Login, Please Retry !";
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
